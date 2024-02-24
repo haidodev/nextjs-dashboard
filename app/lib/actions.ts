@@ -59,7 +59,6 @@ export async function createInvoice(prevState: State, formData: FormData) {
 }
 const UpdateInvoice = InvoiceSchema.omit({ id: true, date: true });
 export async function updateInvoice(id: string, prevState: State, formData: FormData) {
-    console.log("AAAAAAA", id, formData);
     const { customerId, amount, status } = UpdateInvoice.parse({
         customerId: formData.get('customerId'),
         amount: formData.get('amount'),
